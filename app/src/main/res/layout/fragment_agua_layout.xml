@@ -5,11 +5,75 @@
               android:orientation="vertical"
               android:background="@color/colorAsul">
 
-    <TextView
-        android:id="@+id/textView1"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="Agua"/>
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/diasDesde"
+            android:textSize="25sp"
+            android:id="@+id/textView"
+            android:textStyle="bold"
+
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="21"
+            android:textSize="35sp"
+            android:id="@+id/tv_Dias_Agua"
+            android:textStyle="bold"
+            android:layout_marginLeft="6dp"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/txtdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="35sp"
+        android:editable="false"
+        android:shadowColor="@color/colorAccent"
+        android:shadowRadius="9"
+        android:shadowDx="10"
+        android:shadowDy="2"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editarFecha"
+        android:id="@+id/switch1"
+        android:clickable="true"
+        android:checked="false"
+        android:textSize="25sp"
+        android:textStyle="bold"
+
+        android:shadowColor="@color/colorAccent"
+        android:shadowRadius="9"
+        android:shadowDx="10"
+        android:shadowDy="2"
+        android:layout_gravity="center_horizontal"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmar"
+        android:id="@+id/btnShowDialog"
+        android:layout_gravity="center_horizontal"
+        />
 
 </LinearLayout>

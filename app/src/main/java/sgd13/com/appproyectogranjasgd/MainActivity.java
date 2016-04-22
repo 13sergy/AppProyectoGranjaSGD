@@ -1,5 +1,7 @@
 package sgd13.com.appproyectogranjasgd;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -40,6 +42,9 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        android.support.v7.app.ActionBar bar = getSupportActionBar();
+        bar.setBackgroundDrawable(new ColorDrawable(Color.argb(255, 118, 118, 188)));
+
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerPane = (RelativeLayout) findViewById(R.id.drawer_pane);
@@ -95,22 +100,21 @@ public class MainActivity extends ActionBarActivity {
         listFragments.add(new MisGraficos());
         listFragments.add(new MyAcercaDe());
 
-        // load first fragment as default:
+//        Load first fragment as default:
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.main_content, listFragments.get(0)).commit();
-
         setTitle(listNavEntradas.get(0).getTitle());
         lvNav.setItemChecked(0, true);
         drawerLayout.closeDrawer(drawerPane);
 
-        // set listener for navigation items:
+//         Set listener for navigation items:
         lvNav.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                // replace the fragment with the selection correspondingly:
+//                 Replace the fragment with the selection correspondingly:
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager
                         .beginTransaction()
@@ -127,7 +131,8 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+//         Inflate the menu
+//         This adds items to the action bar if it is present.
 
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -135,9 +140,9 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the MisEntradas/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+//         Handle action bar item clicks here. The action bar will
+//         automatically handle clicks on the MisEntradas/Up button, so long
+//         as you specify a parent activity in AndroidManifest.xml.
         if (actionBarDrawerToggle.onOptionsItemSelected(item))
             return true;
 

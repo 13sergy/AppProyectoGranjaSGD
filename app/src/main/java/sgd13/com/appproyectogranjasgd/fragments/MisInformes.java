@@ -18,6 +18,7 @@ import java.util.Vector;
 import sgd13.com.appproyectogranjasgd.R;
 import sgd13.com.appproyectogranjasgd.adapters.FakeContent;
 import sgd13.com.appproyectogranjasgd.adapters.MyFragmentPagerAdapter;
+import sgd13.com.appproyectogranjasgd.animations.DepthPageTransformer;
 import sgd13.com.appproyectogranjasgd.informes.fragments.BeneficiosFragment;
 import sgd13.com.appproyectogranjasgd.informes.fragments.EstadisticasFragment;
 import sgd13.com.appproyectogranjasgd.informes.fragments.GallineroFragment;
@@ -67,6 +68,7 @@ public class MisInformes extends Fragment implements OnTabChangeListener,
                 getChildFragmentManager(), fragments);
         mViewPager = (ViewPager) mView.findViewById(R.id.viewPager);
         mViewPager.setAdapter(this.myViewPagerAdapter);
+        mViewPager.setPageTransformer(true, new DepthPageTransformer());
         mViewPager.setOnPageChangeListener(this);
 
     }

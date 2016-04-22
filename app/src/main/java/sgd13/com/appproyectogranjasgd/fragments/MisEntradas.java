@@ -18,6 +18,7 @@ import java.util.Vector;
 import sgd13.com.appproyectogranjasgd.R;
 import sgd13.com.appproyectogranjasgd.adapters.FakeContent;
 import sgd13.com.appproyectogranjasgd.adapters.MyFragmentPagerAdapter;
+import sgd13.com.appproyectogranjasgd.animations.ZoomOutPageTransformer;
 import sgd13.com.appproyectogranjasgd.entradas.fragments.AguaFragment;
 import sgd13.com.appproyectogranjasgd.entradas.fragments.HuevosFragment;
 import sgd13.com.appproyectogranjasgd.entradas.fragments.LimpiezaFragment;
@@ -33,6 +34,7 @@ public class MisEntradas extends Fragment implements OnTabChangeListener,
     private View mView;
     private boolean onResume=false;
     private HorizontalScrollView hScrollView;
+
 
 
     @Override
@@ -67,6 +69,8 @@ public class MisEntradas extends Fragment implements OnTabChangeListener,
                 getChildFragmentManager(), fragments);
         mViewPager = (ViewPager) mView.findViewById(R.id.viewPager);
         mViewPager.setAdapter(this.myViewPagerAdapter);
+        mViewPager.setPageTransformer(true, new ZoomOutPageTransformer());
+
         mViewPager.setOnPageChangeListener(this);
 
     }

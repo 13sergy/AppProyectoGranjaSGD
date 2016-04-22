@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context="com.sgd13.MainActivity" >
+    tools:context="com.sgd13.MainActivity">
 
     <!-- Main content (main screen) -->
 
@@ -21,16 +21,15 @@
         android:layout_height="match_parent"
         android:layout_gravity="start" >
 
-        <!-- Profile box -->
+        <!-- MENU DESPLEGABLE -->
+        <!-- CABECERA-->
 
         <RelativeLayout
             android:id="@+id/profile_box"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@color/material_blue_grey_800"
+            android:background="@color/colorAccent"
             android:gravity="center_vertical" >
-
-            <!-- CABECERA-->
 
             <LinearLayout
                 android:layout_width="wrap_content"

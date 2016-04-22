@@ -7,5 +7,8 @@
     <string name="drawer_opened">Drawer Opened</string>
     <string name="drawer_closed">Drawer Closed</string>
     <string name="nombre_granja">YiyiGranja</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="editarFecha">Seleccionar fecha</string>
+    <string name="diasDesde">Dias desde:</string>
 
 </resources>
